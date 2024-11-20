@@ -1,0 +1,163 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #f9f7f7, #dbe2ef);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Smoothie Machine Title */
+h1 {
+    color: #f36f36;
+    font-size: 3rem;
+    margin: 20px 0;
+}
+
+/* Film Strip with Moving Smoothie Images */
+.image-trail {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+    animation: moveLeftToRight 40s linear infinite; /* Adjust speed with 40s */
+}
+
+.image-trail img {
+    width: 200px; /* Fixed width for images */
+    height: 300px; /* Fixed height for images */
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 15px;
+}
+
+/* Keyframes for Continuous Left to Right Animation */
+@keyframes moveLeftToRight {
+    0% {
+        transform: translateX(0);
+    }
+}
+
+/* Layout Container for the Form and Static Smoothie Image */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    position: relative;
+}
+
+/* Smoothie Photos */
+.smoothie-photo {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Styling */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    max-width: 500px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Label Styling */
+label {
+    display: block;
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+/* Fieldset Styling */
+fieldset {
+    border: 2px solid #f36f36;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* Legend Styling */
+legend {
+    font-size: 1.2rem;
+    color: #f36f36;
+    font-weight: bold;
+}
+
+/* Input and Select Styling */
+input[type="checkbox"],
+select {
+    margin: 5px;
+}
+
+/* Button Styling */
+button {
+    background: linear-gradient(to right, #f36f36, #e05d2f);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: scale(1);
+    box-shadow: none;
+}
+
+/* Order Summary Styling */
+#summary {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f7fff7;
+    border: 1px solid #d4ebd4;
+    border-radius: 15px;
+    max-width: 500px;
+    text-align: left;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#summary h2 {
+    color: #3a8d3a;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#summary p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .smoothie-photo {
+        margin-bottom: 15px;
+    }
+}

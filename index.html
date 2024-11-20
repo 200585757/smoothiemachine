@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Smoothie Machine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Smoothie Image Film Strip at the Top -->
+    <div class="image-trail">
+        <img src="images/first.jpg" alt="Smoothie 1">
+        <img src="images/second.jpeg" alt="Smoothie 2">
+        <img src="images/third.jpg" alt="Smoothie 3">
+        <img src="images/fourth.jpeg" alt="Smoothie 4">
+        <img src="images/fifth.jpg" alt="Smoothie 5">
+        <img src="images/sixth.jpg" alt="Smoothie 6">
+        <img src="images/seventh.webp" alt="Smoothie 7">
+        <img src="images/eight.webp" alt="Smoothie 8">
+        <img src="images/nine.jpeg" alt="Smoothie 9">
+        <img src="images/ten.webp" alt="Smoothie 10">
+    </div>
+    <h1>The Smoothie Machine</h1>
+    <div class="container">
+        <!-- Left Side: Static Smoothie Image -->
+        <img src="images/Smoothie Left.jpg" alt="Smoothie Left" class="smoothie-photo">
+        
+        <form id="smoothieForm">
+            <label for="size">Choose size:</label>
+            <select id="size" name="size">
+                <option value="small">Small ($5)</option>
+                <option value="medium">Medium ($7)</option>
+                <option value="large">Large ($9)</option>
+            </select>
+
+            <fieldset>
+                <legend>Pick your ingredients:</legend>
+                <label><input type="checkbox" value="Banana" data-price="1"> Banana ($1)</label>
+                <label><input type="checkbox" value="Strawberry" data-price="1.5"> Strawberry ($1.5)</label>
+                <label><input type="checkbox" value="Mango" data-price="2"> Mango ($2)</label>
+                <label><input type="checkbox" value="Blueberry" data-price="2"> Blueberry ($2)</label>
+                <label><input type="checkbox" value="Spinach" data-price="1"> Spinach ($1)</label>
+                <label><input type="checkbox" value="Pineapple" data-price="1.5"> Pineapple ($1.5)</label>
+                <label><input type="checkbox" value="Almond Milk" data-price="1"> Almond Milk ($1)</label>
+                <label><input type="checkbox" value="Honey" data-price="0.5"> Honey ($0.5)</label>
+                <label><input type="checkbox" value="Avocado" data-price="2.5"> Avocado ($2.5)</label>
+                <label><input type="checkbox" value="Peanut Butter" data-price="1.5"> Peanut Butter ($1.5)</label>
+                <label><input type="checkbox" value="Kiwi" data-price="3"> Avocado ($3)</label>
+            </fieldset>
+
+            <label for="extras">Add-ons:</label>
+            <select id="extras" name="extras">
+                <option value="">None</option>
+                <option value="Protein" data-price="3">Protein Powder ($3)</option>
+                <option value="Chia" data-price="2">Chia Seeds ($2)</option>
+                <option value="Flaxseed" data-price="2">Flaxseed ($2)</option>
+                <option value="Collagen" data-price="3.5">Collagen Powder ($3.5)</option>
+            </select>
+
+            <button type="button" id="orderButton">Order Now</button>
+        </form>
+
+        <!-- Right Side: Static Smoothie Image -->
+        <img src="images/Smoothie Right.webp" alt="Smoothie Right" class="smoothie-photo">
+    </div>
+    <div id="summary"></div>
+    <script src="script.js"></script>
+</body>
+</html>
